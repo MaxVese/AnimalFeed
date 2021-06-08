@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/froze" android:id="@+id/action_size"
+        android:icon="@drawable/ic_size"/>
+    <item android:title="@string/molt" android:id="@+id/action_linka"
+        android:icon="@drawable/ic_wool"/>
+    <item android:title="@string/feeding" android:id="@+id/action_eat"
+        android:icon="@drawable/ic_chicken"/>
+    <item android:title="@string/weight" android:id="@+id/action_wight"
+        android:icon="@drawable/ic_weight"/>
+    <item android:title="@string/another" android:id="@+id/action_another"
+        android:icon="@drawable/ic_more"/>
+</menu>

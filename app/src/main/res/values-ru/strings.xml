@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Reptile Feed Timer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Имя</string>
+    <string name="choose_image">Выбрать изображение</string>
+    <string name="kind">Вид/Морфа</string>
+    <string name="last_feed_date">Дата последнего кормления</string>
+    <string name="interval_feed">Интервал кормления(в днях)</string>
+    <string name="save">Сохранить</string>
+    <string name="donate_info">Оказать помощь проекту вы можете:\nПереводом на Кошелек Яндекс Денег <annotation type="copy_link">№410015742657084</annotation>\nИли по ссылке <annotation type="help_link">https://money.yandex.ru/to/410015742657084</annotation> или на сбер 5336690059307506\nВсе средства пойдут исключительно на развитие проекта.\n\nВ планах:\n-Синхронизация в облаке (для восстановления данных после переустановки приложения, утери телефона).\n-Расширенные настройки (повысит удобность использования, добавит управление уведомлениями).\n-Возможность передачи журнала на другое приложение (при продаже можно передать и всю хранимую информацию животном).\n\nДругие идеи по функционалу вы можете писать в комментарии к переводу в Яндекс Деньгах.\n
+    </string>
+    <string name="history_title">Дневник</string>
+    <string name="info">Информация</string>
+    <string name="edit">Редактирование</string>
+    <string name="all_time">За все время</string>
+    <string name="default_interval">1</string>
+    <string name="what_new">
+- Добавлена возможность создавать группы животных;\n
+- Добавлена возможность записи веса;\n
+- Добавлена возможно подсчета возраста животного;\n
+- Добавлено поле для заметок в карточке животного;\n
+- Добавлена возможность двухразового кормления;\n
+- Добавлена кнопка "Покормил" в уведомлении, которая открывает приложение, чтобы некоторые смартфоны не отключали приложение, для экономии энергии как не используемое (для тех у кого перестают приходить уведомления со временем);\n
+- Исправлен баг с сплющиванием аватарки при установке  не квадратного изображения
+    </string>
+    <string name="empty_message">Пока ничего нет</string>
+    <string name="no_group">Без группы</string>
+    <string name="group">Группа</string>
+    <string name="animal">Животное</string>
+    <string name="groups">Группы</string>
+    <string name="group_name">Название группы</string>
+    <string name="notes">Заметки</string>
+    <string name="manage_time">Управление временем</string>
+    <string name="automatic">Автоматически</string>
+    <string name="_00_00">00:00</string>
+    <string name="age">Возраст</string>
+    <string name="date_born">Дата вылупления</string>
+    <string name="set_age">Установить возраст</string>
+    <string name="evening">Вечер</string>
+    <string name="morning">Утро</string>
+    <string name="time_mornin_mat_before_evening">Время утреннего кормления должно быть раньше вечернего</string>
+    <string name="set_all_fields">Заполните все поля</string>
+    <string name="all">Все</string>
+    <string name="remove">Удалить</string>
+    <string name="shure_to_delete">Действительно удалить?</string>
+    <string name="eated">Покормил</string>
+    <string name="put_off_for_a_day">Отложить на день</string>
+    <string name="this_group_already_exist">Такая группа уже существует</string>
+    <string name="export_to_excel">Экспорт в эксель</string>
+    <string name="filter">Фильтр</string>
+    <string name="donate">Скинуть на кофеёк</string>
+    <string name="allow_back_work">Разрешить работу в фоне</string>
+    <string name="froze">Замер</string>
+    <string name="molt">Линька</string>
+    <string name="feeding">Кормление</string>
+    <string name="froze_long">Замер роста</string>
+    <string name="another">Другое</string>
+    <string name="weight">Вес</string>
+    <string name="information">Информация</string>
+    <string name="enter_value_in_cm">Введите значение в см</string>
+    <string name="enter_weight_in_grams">Введите вес в граммах</string>
+    <string name="what_did_you_feed">Чем кормил?</string>
+    <string name="animalphoto">AnimalPhoto</string>
+    <string name="for_all_time">За все время</string>
+    <string name="from">С</string>
+    <string name="to">По</string>
+    <string name="db_saved">Журнал сохранен</string>
+    <string name="Journal">Дневник</string>
+    <string name="in_word">в</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="background_work">Работа в фоне</string>
+    <string name="background_work_text_body">Для корректной работы приложения и получения напоминаний о кормлении, необходимо разрешить работу в фоне</string>
+    <string name="allow">Разрешить</string>
+    <string name="dont_ask_again">Больше не спрашивать</string>
+    <string name="what_new_in_version">Что нового в версии?</string>
+    <string name="transfer_expired">Срок переноса истек</string>
+    <string name="feeding_transfer">Перенос кормления</string>
+    <string name="number_copied">Номер скопирован</string>
+    <string name="time_to_feed">Пора кормить</string>
+    <string name="removed">удалено</string>
+    <string name="nothing_to_save">Пока нечго сохранять</string>
+    <string name="save_error">Ошибка сохранения</string>
+    <string name="feeding_successful">Кормление успешно</string>
+    <string name="cm">см</string>
+    <string name="gram">г</string>
+    <string name="auto_m">Автоматическое двойное, уведомления включены</string>
+    <string name="auto_s">Автоматическое, уведомления включены</string>
+    <string name="auto_hand">Ручное, уведомления выключены</string>
+    <string name="fed_today">Кормили сегодня</string>
+    <string name="fed_morning">Кормили утром</string>
+    <string name="fed_evening">Кормили вечером</string>
+    <string name="what_trial_version">Это пробная версия</string>
+</resources>

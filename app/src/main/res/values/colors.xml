@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00CC00</color>
+    <color name="colorPrimaryDark">#00CC00</color>
+    <color name="colorAccent">#67E667</color>
+    <color name="colorStrokePhoto">#bf222222</color>
+    <color name="searchBackground">#50e4e4e4</color>
+    <color name="urlColor">#6A68A8</color>
+    <color name="list_background">#FAF7F7</color>
+    <color name="grey">#cecece</color>
+    <color name="grey2">#03CEBA</color>
+    <color name="bt_error_red">#DD5555</color>
+</resources>

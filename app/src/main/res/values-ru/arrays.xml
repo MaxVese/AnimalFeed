@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="take_photo">
+        <item>Из галереии</item>
+        <item>Сделать снимок</item>
+    </string-array>
+    <string-array name="filters">
+        <item>Все</item>
+        <item>Кормление</item>
+        <item>Замер</item>
+        <item>Линька</item>
+        <item>Вес</item>
+        <item>Другое</item>
+    </string-array>
+    <string-array name="date_born">
+        <item>Установить дату</item>
+        <item>Указать вручную</item>
+    </string-array>
+    <string-array name="feed_type">
+        <item>Авто (раз в день)</item>
+        <item>Авто (два раза в день)</item>
+        <item>Ручное кормление</item>
+    </string-array>
+    <string-array name="feed_type_info">
+        <item>Автоматически. Уведомления включены</item>
+        <item>Автоматически, утром и вечером. Уведомления включены</item>
+        <item>Уведомления отключены, кормление по кнопке</item>
+    </string-array>
+</resources>

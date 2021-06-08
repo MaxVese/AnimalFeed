@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="take_photo">
+        <item>From gallery</item>
+        <item>Using camera</item>
+    </string-array>
+    <string-array name="filters">
+        <item>All</item>
+        <item>Feeding</item>
+        <item>Metering</item>
+        <item>Molt</item>
+        <item>Weight</item>
+        <item>Another</item>
+    </string-array>
+    <string-array name="date_born">
+        <item>Set a date</item>
+        <item>By yourself</item>
+    </string-array>
+    <string-array name="feed_type">
+        <item>Auto (1 time feeding)</item>
+        <item>Auto (2 times feeding)</item>
+        <item>Feeding using button</item>
+    </string-array>
+    <string-array name="feed_type_info">
+        <item>Auto. Notifications enabled</item>
+        <item>Auto. At morning at evening. Notifications enabled</item>
+        <item>By yourself. Feeding only by pushing "Chicken" button. Notifications disabled</item>
+    </string-array>
+</resources>

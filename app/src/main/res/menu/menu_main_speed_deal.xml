@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/group" android:id="@+id/action_add_group"
+        android:icon="@drawable/ic_baseline_group_24"/>
+    <item android:title="@string/animal" android:id="@+id/action_add_animal"
+        android:icon="@drawable/ic_snake"/>
+</menu>

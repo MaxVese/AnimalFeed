@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Reptile Feed Timer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="choose_image">Choose image</string>
+    <string name="kind">Species/morph</string>
+    <string name="last_feed_date">Last feed date</string>
+    <string name="interval_feed">Feeding interval(Days)</string>
+    <string name="save">Save</string>
+    <string name="donate_info">To donate:\nPlease use Yandex money link <annotation type="help_link">https://money.yandex.ru/to/410015742657084</annotation> or paypal <annotation type="help_link">https://paypal.me/artemposevin</annotation> link \nAll money going to upgrading the app.\n\nTo do list:\n-Cloud saving (to save your information if smartphone lost or changed).\n-New settings (to best user experience).\n-Send diary to other user (helps when u want to sell your pet to give buyer full pet`s information).\n\nOther ideas u can write in donation comments.\n
+    </string>
+    <string name="history_title">Diary</string>
+    <string name="info">Information</string>
+    <string name="edit">Edit</string>
+    <string name="all_time">All time</string>
+    <string name="default_interval">1</string>
+    <string name="what_new">
+- Added the ability to create groups of animals;\n
+- Added the ability to record weight;\n
+- Added the ability to calculate the age of an animal;\n
+- Added a field for notes in the animal card;\n
+- Added the ability to feed twice a day;\n
+- Added the "Fed" button in the notification, which opens the app so that some smartphones do not disable the app, to save energy as not used (for those who stop receiving notifications over time);\n
+- Fixed a bug with flattening the avatar when installing a non-square image
+    </string>
+    <string name="empty_message">Empty</string>
+    <string name="no_group">Without group</string>
+    <string name="group">Group</string>
+    <string name="animal">Animal</string>
+    <string name="groups">Groups</string>
+    <string name="group_name">Group name</string>
+    <string name="notes">Notes</string>
+    <string name="manage_time">Feed type</string>
+    <string name="automatic">Automaticly</string>
+    <string name="_00_00">00:00</string>
+    <string name="age">Age</string>
+    <string name="date_born">Was born date</string>
+    <string name="set_age">Set age</string>
+    <string name="evening">Evening</string>
+    <string name="morning">Morning</string>
+    <string name="time_mornin_mat_before_evening">Time of morning feed must be before evening</string>
+    <string name="set_all_fields">Set all fields</string>
+    <string name="all">All</string>
+    <string name="remove">Delete</string>
+    <string name="shure_to_delete">Are u sure?</string>
+    <string name="eated">Feeded</string>
+    <string name="put_off_for_a_day">Put off for a day</string>
+    <string name="this_group_already_exist">This group already exist</string>
+    <string name="export_to_excel">Export to excel</string>
+    <string name="filter">Filter</string>
+    <string name="donate">Donate</string>
+    <string name="allow_back_work">Allow background work</string>
+    <string name="froze">Metering</string>
+    <string name="froze_long">Metering</string>
+    <string name="molt">Molt</string>
+    <string name="feeding">Feeding</string>
+    <string name="weight">Weight</string>
+    <string name="information">Информация</string>
+    <string name="enter_value_in_cm">Enter value un cm</string>
+    <string name="enter_weight_in_grams">Enter weight in grams</string>
+    <string name="what_did_you_feed">What did you feed?</string>
+    <string name="another">Another</string>
+    <string name="animalphoto">Animal Photo</string>
+    <string name="for_all_time">All time</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="db_saved">Database saved</string>
+    <string name="Journal">Journal</string>
+    <string name="in_word">in</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="background_work">Background work</string>
+    <string name="background_work_text_body">For the application to work correctly and to receive feeding reminders, you must enable background work</string>
+    <string name="allow">Allow</string>
+    <string name="dont_ask_again">Don\'t ask again</string>
+    <string name="what_new_in_version">What\'s new in the version?</string>
+    <string name="transfer_expired">Transfer expired</string>
+    <string name="feeding_transfer">Feeding transfer</string>
+    <string name="number_copied">Number copied</string>
+    <string name="time_to_feed">Time to eat</string>
+    <string name="removed">removed</string>
+    <string name="nothing_to_save">Nothing to save</string>
+    <string name="save_error">Save error</string>
+    <string name="feeding_successful">Feeding successful</string>
+    <string name="cm">cm</string>
+    <string name="gram">g</string>
+    <string name="auto_m">Automatic double, notifications enabled</string>
+    <string name="auto_s">Automatic, notifications enabled</string>
+    <string name="auto_hand">Manual, notifications disabled</string>
+    <string name="fed_today">Fed today</string>
+    <string name="fed_morning">Fed morning</string>
+    <string name="fed_evening">Fed evening</string>
+    <string name="what_trial_version">This is a trial version</string>
+
+
+</resources>

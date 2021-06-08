@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.sem.animalfeed.ui.main.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/animalFragment"
+        tools:layout="@layout/fragment_animal"
+        android:name="ru.sem.animalfeed.ui.animal.AnimalFragment"
+        android:label="AnimalFragment" >
+        <argument
+            android:name="anim_id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        tools:layout="@layout/fragment_detail"
+        android:name="ru.sem.animalfeed.ui.detail.DetailFragment"
+        android:label="" >
+        <argument
+            android:name="anim_id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_groups"
+        android:id="@+id/groupsFragment"
+        android:name="ru.sem.animalfeed.ui.groups.GroupsFragment"
+        android:label="@string/groups" />
+    <fragment
+        tools:layout="@layout/fragment_main_page"
+        android:id="@+id/mainPageFragment"
+        android:name="ru.sem.animalfeed.ui.main.MainPageFragment"
+        android:label="MainPageFragment" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_groupsFragment"
+            app:destination="@id/groupsFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_animalFragment"
+            app:destination="@id/animalFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="ic_gender">48dp</dimen>
+    <dimen name="btn_hor_padding">14dp</dimen>
+    <dimen name="btn_ver_padding">10dp</dimen>
+
+</resources>
