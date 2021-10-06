@@ -132,6 +132,12 @@ class MainViewModel @Inject constructor(
         }
     }
 
+//    fun switchPosition(firstPos:Long,secondPos:Long){
+//        animalDao.setPos(firstPos,secondPos)
+//        animalDao.setPos(secondPos,firstPos)
+//    }
+
+
     fun delAnimal(animal: Animal){
         if(!animal.isHand){
             val am: AlarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -265,4 +271,5 @@ class MainViewModel @Inject constructor(
                 .apply()
         }
     }
+
 }

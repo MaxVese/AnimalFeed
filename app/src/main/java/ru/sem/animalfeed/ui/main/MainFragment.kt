@@ -13,15 +13,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_groups.*
 import kotlinx.android.synthetic.main.fragment_main.*
 import ru.sem.animalfeed.*
 import ru.sem.animalfeed.di.modules.ViewModelFactory
 import ru.sem.animalfeed.model.Animal
 import ru.sem.animalfeed.ui.base.BaseFragment
+import ru.sem.animalfeed.ui.groups.DragAndSwipeItemTouchHelperCallback
 import ru.sem.animalfeed.ui.history.HistoryActivity
 import ru.sem.animalfeed.utils.ContextMenuRecyclerView.RecyclerContextMenuInfo
 import ru.sem.animalfeed.utils.VerticalSpaceItemDecoration
@@ -89,6 +92,14 @@ class MainFragment : BaseFragment(R.layout.fragment_main), AnimalAdapter.OnAnima
                 }
                 val itemTouchHelper = ItemTouchHelper(swipeHandler)
                 itemTouchHelper.attachToRecyclerView(rvAnimal)*/
+
+//                val callback = DragAndSwipeItemTouchHelperCallback(
+//                        adapter!!,
+//                        requireContext(),
+//                        false
+//                )
+//                val touchHelper = ItemTouchHelper(callback)
+//                touchHelper.attachToRecyclerView(rvAnimal)
             }
             Log.d(TAG, "initialiseViewModel: setdata")
             adapter!!.setData(it)
@@ -143,6 +154,10 @@ class MainFragment : BaseFragment(R.layout.fragment_main), AnimalAdapter.OnAnima
     override fun onAnimalDeleteClick(animal: Animal, position: Int) {
         viewModel.delAnimal(animal)
     }
+
+//    override fun onDragComplete(firstPos: Long, secondPos: Long) {
+//        viewModel.switchPosition(firstPos,secondPos)
+//    }
 
     override fun onAnimalItemClick(animal: Animal, imageView: ImageView) {
         val bundle =  Bundle()

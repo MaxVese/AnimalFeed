@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="This is trial version"
+            android:text="@string/trial_version_desc"
             android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

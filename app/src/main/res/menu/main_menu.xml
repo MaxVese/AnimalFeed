@@ -4,4 +4,10 @@
     <item
         android:id="@+id/action_power"
         android:title="@string/allow_back_work" />
+
+    <item
+        android:id="@+id/VkIcon"
+        android:title="VK"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/vk_icon"/>
 </menu>

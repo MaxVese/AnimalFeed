@@ -3,6 +3,8 @@ package ru.sem.animalfeed.ui.main
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.ResolveInfo
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -29,6 +31,8 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {
     companion object{
         const val TAG = "MainActivity"
+        const val VK_APP_PACKAGE_ID = "com.vkontakte.android"
+        const val VK_ANIMAL_FEED = "https://vk.com/reptile_feed_timer"
     }
 
     @Inject
@@ -133,6 +137,25 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
         if(!isPower) showPowerDialog()
     }
 
+    private fun openVkLink() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(VK_ANIMAL_FEED))
+
+        val resInfo: List<ResolveInfo> =
+            packageManager.queryIntentActivities(intent, 0)
+
+        if (resInfo.isEmpty()) return
+
+        for (info in resInfo) {
+            if (info.activityInfo == null) continue
+            if (VK_APP_PACKAGE_ID == info.activityInfo.packageName) {
+                intent.setPackage(info.activityInfo.packageName)
+                break
+            }
+        }
+        startActivity(intent)
+    }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id: Int = item.itemId
         return when (id) {
@@ -144,9 +167,14 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
                 showPowerDialog()
                 true
             }
+            R.id.VkIcon -> {
+                openVkLink()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)

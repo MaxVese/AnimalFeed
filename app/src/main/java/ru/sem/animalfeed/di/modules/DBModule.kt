@@ -28,6 +28,7 @@ class DBModule {
             .addMigrations(Migration4to5(4, 5))
             .addMigrations(Migration5to6(5, 6))
             .addMigrations(Migration6to7(6, 7))
+//            .addMigrations(Migration7to8(7, 8))
             .allowMainThreadQueries()
             .build()
     }

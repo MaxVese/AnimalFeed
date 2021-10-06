@@ -51,6 +51,7 @@ class AnimalViewModel @Inject constructor(val animalDao: AnimalDao, val context:
         }
         if(animal!!.id==null){
             val id = animalDao.insert(animal!!)
+//            animalDao.setPos(id,id)
             if(!animal!!.isHand) createAlarm(id)
         }else{
             animalDao.update(animal!!)

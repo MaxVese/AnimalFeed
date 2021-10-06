@@ -1,7 +1,9 @@
 package ru.sem.animalfeed.ui.main
 
+import android.content.ClipData
 import android.content.Context
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +13,11 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.chauthai.swipereveallayout.SwipeRevealLayout
+import com.google.android.material.card.MaterialCardView
 import com.squareup.picasso.Picasso
 import org.threeten.bp.LocalDate
 import org.threeten.bp.LocalDateTime
@@ -24,8 +28,11 @@ import ru.sem.animalfeed.TRANSACTION_PHOTO
 import ru.sem.animalfeed.model.Animal
 import ru.sem.animalfeed.model.FeedType
 import ru.sem.animalfeed.model.Gender
+import ru.sem.animalfeed.ui.groups.ItemTouchHelperAdapter
+import ru.sem.animalfeed.ui.groups.ItemTouchHelperViewHolder
 import ru.sem.animalfeed.utils.DateUtilsA
 import java.io.File
+import java.util.*
 
 
 class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.ViewHolder>(){
@@ -37,6 +44,7 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
         fun onAnimalEatClick(animal: Animal?)
         fun onHistoryBtnClick(animalId: Long?)
         fun onAnimalDeleteClick(animal: Animal, position: Int)
+//        fun onDragComplete(firstPos:Long,secondPos:Long)
     }
 
     companion object {
@@ -46,6 +54,9 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
         const val EXTRA_GENDER="gender"
         const val EXTRA_DATE="dt"
     }
+
+
+
 
     class SEDiffUtilCallback(private val oldList: List<Animal>, private val newList: List<Animal>) : DiffUtil.Callback() {
 
@@ -91,7 +102,7 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
         }*/
     }
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         init {
             val container = itemView.findViewById<View>(R.id.containerAnimal)
@@ -146,6 +157,33 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
         val imgGender = itemView.findViewById<ImageView>(R.id.imgGender)
         val tvFeedType = itemView.findViewById<TextView>(R.id.tvFeedType)
         val tvLastFeed = itemView.findViewById<TextView>(R.id.tvLastFeed)
+        val materialCardView = itemView.findViewById<MaterialCardView>(R.id.containerAnimal)
+
+//        override fun onItemSelected(context: Context) {
+//            materialCardView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorAccent))
+//            tvName.setTextColor(ContextCompat.getColor(context, android.R.color.white))
+//            tvDate.setTextColor(ContextCompat.getColor(context, android.R.color.white))
+//            tvKind.setTextColor(ContextCompat.getColor(context, android.R.color.white))
+//            tvFeedType.setTextColor(ContextCompat.getColor(context, android.R.color.white))
+//            tvLastFeed.setTextColor(ContextCompat.getColor(context, android.R.color.white))
+////            imgDrag.setColorFilter(
+////                    ContextCompat.getColor(context, android.R.color.white),
+////                    PorterDuff.Mode.SRC_IN
+////            )
+//        }
+//
+//        override fun onItemClear(context: Context) {
+//            materialCardView.setBackgroundColor(ContextCompat.getColor(context, android.R.color.white))
+////            imgDrag.setColorFilter(
+////                    ContextCompat.getColor(context, R.color.grey2),
+////                    PorterDuff.Mode.SRC_IN
+////            )
+//            tvName.setTextColor(ContextCompat.getColor(context, android.R.color.black))
+//            tvDate.setTextColor(Color.parseColor("#999999"))
+//            tvKind.setTextColor(ContextCompat.getColor(context, R.color.abc_secondary_text_material_light))
+//            tvFeedType.setTextColor(ContextCompat.getColor(context, R.color.abc_secondary_text_material_light))
+//            tvLastFeed.setTextColor(ContextCompat.getColor(context, android.R.color.holo_red_light))
+//        }
 
     }
 
@@ -166,8 +204,8 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v: View = LayoutInflater.from(viewGroup.context).inflate(
-            R.layout.item_animal,
-            viewGroup, false
+                R.layout.item_animal,
+                viewGroup, false
         )
         return ViewHolder(v)
     }
@@ -207,7 +245,6 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val animal = data!![position]
-
         holder.run {
             imgMain.transitionName = TRANSACTION_PHOTO+animal.id
             tvName.text = animal.name
@@ -219,12 +256,12 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
 
             when(animal.feedType!!){
                 FeedType.AUTO_MULTIPLE_DAY -> {
-                    Log.d("mylog","auto multiple " + animal.lastFeed + " " + LocalDateTime.now().with(animal.morning))
-                    if(animal.lastFeed?.withNano(0)?.withSecond(0)?.withMinute(0) == LocalDateTime.now().with(animal.morning)?.withNano(0)?.withSecond(0)?.withMinute(0)){
+                    Log.d("mylog", "auto multiple " + animal.lastFeed + " " + LocalDateTime.now().with(animal.morning))
+                    if (animal.lastFeed?.withNano(0)?.withSecond(0)?.withMinute(0) == LocalDateTime.now().with(animal.morning)?.withNano(0)?.withSecond(0)?.withMinute(0)) {
                         tvLastFeed.visibility = View.VISIBLE
                         tvLastFeed.text = context.getString(R.string.fed_morning)
                     }
-                    if(animal.lastFeed?.withNano(0)?.withSecond(0)?.withMinute(0) == LocalDateTime.now().with(animal.evening)?.withNano(0)?.withSecond(0)?.withMinute(0)){
+                    if (animal.lastFeed?.withNano(0)?.withSecond(0)?.withMinute(0) == LocalDateTime.now().with(animal.evening)?.withNano(0)?.withSecond(0)?.withMinute(0)) {
                         tvLastFeed.visibility = View.VISIBLE
                         tvLastFeed.text = context.getString(R.string.fed_evening)
                     }
@@ -245,7 +282,7 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
             if(animal.isHand){
                 tvDate.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_bowl, 0)
             } else{
-                tvDate.setCompoundDrawablesWithIntrinsicBounds(0, 0,  R.drawable.ic_eat_time, 0)
+                tvDate.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_eat_time, 0)
             }
 
             tvFeedType.text = getFeedTypeString(animal, itemView.context)
@@ -268,6 +305,31 @@ class AnimalAdapter(var context: Context) : RecyclerView.Adapter<AnimalAdapter.V
             }
         };
     }
+
+//    override fun onItemMove(fromPosition: Int, toPosition: Int)  {
+//        if (fromPosition < toPosition) {
+//            for (i in fromPosition until toPosition) {
+//                Collections.swap(data, i, i + 1)
+//            }
+//        } else {
+//            for (i in fromPosition downTo toPosition + 1) {
+//                Collections.swap(data, i, i - 1)
+//            }
+//        }
+//        notifyItemMoved(fromPosition, toPosition)
+//
+//        Log.d("mylog","Move")
+//    }
+//
+//    override fun onItemMoveComplete(fromPosition: Int, toPosition: Int) {
+//        Log.d("mylog",fromPosition.toString() + "->" + toPosition.toString())
+//        Log.d("mylog",data?.get(fromPosition)!!.pos!!.toString() + "->" + data?.get(toPosition)!!.pos!!.toString())
+//        listener?.onDragComplete(data?.get(fromPosition)!!.pos!!,data?.get(toPosition)!!.pos!!)
+//    }
+//
+//    override fun onItemDismiss(position: Int) {
+//        TODO("Not yet implemented")
+//    }
 
     /*override fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any>) {
         if (payloads.isEmpty()) {

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "287114672383-o4lss1g9vqb5gv65bc120acphtrn152s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.sem.animalfeed",
+            "certificate_hash": "020452ed4a1f32e8cb5fb9378d77d5cf60669eff"
+          }
+        },
+        {
           "client_id": "287114672383-qecotuubflgtmkrtdmt9t30vghm1mhml.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -21,6 +29,35 @@
             "certificate_hash": "4f53c743176dcd4138060d9b77f5551b5d655091"
           }
         },
+        {
+          "client_id": "287114672383-rsc2valbrp83c1slg63p7d3naepovgi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEOu-6gkXStK_0Ni5bRna_iaX-pYxc78k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287114672383-rsc2valbrp83c1slg63p7d3naepovgi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287114672383:android:02b6dbcd34b9372c65b4ca",
+        "android_client_info": {
+          "package_name": "ru.sem.animalfeedpro"
+        }
+      },
+      "oauth_client": [
         {
           "client_id": "287114672383-rsc2valbrp83c1slg63p7d3naepovgi1.apps.googleusercontent.com",
           "client_type": 3

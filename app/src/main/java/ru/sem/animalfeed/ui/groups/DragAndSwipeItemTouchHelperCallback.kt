@@ -22,6 +22,9 @@ class DragAndSwipeItemTouchHelperCallback(
     private val backgroundColor = Color.parseColor("#f44336")
     private val clearPaint = Paint().apply { xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR) }
 
+//    private var dragFromPosition = -1
+//    private var dragToPosition = -1
+
     override fun isLongPressDragEnabled(): Boolean {
         return true
     }
@@ -42,6 +45,7 @@ class DragAndSwipeItemTouchHelperCallback(
         viewHolder: RecyclerView.ViewHolder,
         target: RecyclerView.ViewHolder
     ): Boolean {
+//        dragToPosition = target.adapterPosition
         mAdapter.onItemMove(viewHolder.adapterPosition, target.adapterPosition)
         return true;
     }
@@ -106,6 +110,20 @@ class DragAndSwipeItemTouchHelperCallback(
             itemViewHolder.onItemSelected(context)
         }
         super.onSelectedChanged(viewHolder, actionState)
+//        when (actionState) {
+//            ItemTouchHelper.ACTION_STATE_DRAG -> {
+//                viewHolder?.also { dragFromPosition = it.adapterPosition }
+//            }
+//            ItemTouchHelper.ACTION_STATE_IDLE -> {
+//                if (dragFromPosition != -1 && dragToPosition != -1 && dragFromPosition != dragToPosition) {
+//                    // Item successfully dragged
+//                    mAdapter.onItemMoveComplete(dragFromPosition, dragToPosition)
+//                    // Reset drag positions
+//                    dragFromPosition = -1
+//                    dragToPosition = -1
+//                }
+//            }
+//        }
     }
 
     override fun clearView(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder) {

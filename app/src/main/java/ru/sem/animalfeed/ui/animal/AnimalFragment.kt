@@ -292,7 +292,7 @@ class AnimalFragment : BaseTakePhotoFragment(R.layout.fragment_animal) {
                 else -> rbGenderUnknown.isChecked = true
             }
 
-            if (it?.photo != null && it.photo!!.isNotEmpty()) {
+            if (it?.photo != null && it.photo!!.isNotEmpty() && File(it.photo).exists()) {
                 val scale = ImageFilePath.getScaleSizeImage(File(it.photo), MAX_AVA_WIDTH)
                 Picasso.get().load(File(it.photo))
                     .resize(scale.first, scale.second)

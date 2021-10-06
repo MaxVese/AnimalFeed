@@ -180,6 +180,7 @@ class GroupsAdapter : RecyclerView.Adapter<GroupsAdapter.ViewHolder>(), ItemTouc
         //return true
     }
 
+
     override fun onItemDismiss(position: Int) {
 
     }
