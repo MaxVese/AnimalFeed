@@ -11,13 +11,22 @@ class Migration7to8(val startVersion: Int, val oldVestion: Int) : Migration(
 
     companion object{
         const val TAG = "Migration7to8"
-
+        private const val sqlBroodTable = "CREATE TABLE \"broods\" (\n" +
+                "\"id\"  INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                "\"pos\"  INTEGER,\n" +
+                "\"broodName\"  TEXT NOT NULL UNIQUE,\n" +
+                "\"fatherKind\"  TEXT ,\n" +
+                "\"fatherPhoto\"  TEXT ,\n" +
+                "\"motherKind\"  TEXT ,\n" +
+                "\"motherPhoto\"  TEXT ,\n" +
+                "\"masonryDate\"  INTEGER ,\n" +
+                "\"hatchingDate\"  INTEGER \n" +
+                ");"
     }
 
 
     override fun migrate(database: SupportSQLiteDatabase) {
-        Log.d(TAG,"add pos column")
-
+        database.execSQL(sqlBroodTable)
 
     }
 }

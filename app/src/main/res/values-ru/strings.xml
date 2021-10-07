@@ -101,5 +101,14 @@
     <string name="fed_evening">Кормили вечером</string>
     <string name="what_trial_version">Это пробная версия</string>
     <string name="trial_version_desc">Теперь приложение имеет бесплатную версию (рекламный баннер и 3 животных бесплатно) и "Pro" версию (без рекламы и ограничений).</string>
+    <string name="brood">Выводок</string>
+    <string name="broods">Выводки</string>
+    <string name="male">Самец</string>
+    <string name="female">Самка</string>
+    <string name="date_brood">Дата кладки</string>
+    <string name="hatching_date">Дата Вылупа</string>
+    <string name="create_animal">Создать Животное</string>
+    <string name="brood_name">Название выводка</string>
+
 
 </resources>

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import ru.sem.animalfeed.ui.Brood.BroodViewModel
 import ru.sem.animalfeed.ui.animal.AnimalViewModel
 import ru.sem.animalfeed.ui.history.HistoryViewModel
 import ru.sem.animalfeed.ui.main.MainViewModel
@@ -30,5 +31,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(HistoryViewModel::class)
     protected abstract fun bindHistoryViewModel(historyViewModel: HistoryViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BroodViewModel::class)
+    protected abstract fun bindBroodViewModel(broodViewModel: BroodViewModel): ViewModel
 
 }

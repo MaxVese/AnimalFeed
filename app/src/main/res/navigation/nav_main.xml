@@ -47,5 +47,22 @@
         <action
             android:id="@+id/action_mainPageFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_broodListFragment"
+            app:destination="@id/broodListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/broodListFragment"
+        android:name="ru.sem.animalfeed.ui.Brood.BroodListFragment"
+        android:label="fragment_brood_list"
+        tools:layout="@layout/fragment_brood_list" >
+        <action
+            android:id="@+id/action_broodListFragment_to_broodFragment"
+            app:destination="@id/broodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/broodFragment"
+        android:name="ru.sem.animalfeed.ui.Brood.BroodFragment"
+        android:label="brood_fragment"
+        tools:layout="@layout/brood_fragment" />
 </navigation>

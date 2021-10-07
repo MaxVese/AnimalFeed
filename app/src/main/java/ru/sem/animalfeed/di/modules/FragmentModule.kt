@@ -2,6 +2,8 @@ package ru.sem.animalfeed.di.modules
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import ru.sem.animalfeed.ui.Brood.BroodFragment
+import ru.sem.animalfeed.ui.Brood.BroodListFragment
 import ru.sem.animalfeed.ui.animal.AnimalFragment
 import ru.sem.animalfeed.ui.detail.DetailFragment
 import ru.sem.animalfeed.ui.groups.GroupsFragment
@@ -39,4 +41,10 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun contributeMainPageFragment(): MainPageFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeBroodListFragment(): BroodListFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeBroodFragment(): BroodFragment
 }

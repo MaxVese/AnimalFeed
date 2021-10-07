@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import ru.sem.animalfeed.db.AppDatabase
 import ru.sem.animalfeed.db.dao.AnimalDao
+import ru.sem.animalfeed.db.dao.BroodDao
 import ru.sem.animalfeed.db.dao.GroupsDao
 import ru.sem.animalfeed.db.dao.HistoryDao
 import ru.sem.animalfeed.db.migration.*
@@ -28,7 +29,7 @@ class DBModule {
             .addMigrations(Migration4to5(4, 5))
             .addMigrations(Migration5to6(5, 6))
             .addMigrations(Migration6to7(6, 7))
-//            .addMigrations(Migration7to8(7, 8))
+            .addMigrations(Migration7to8(7, 8))
             .allowMainThreadQueries()
             .build()
     }
@@ -49,5 +50,11 @@ class DBModule {
     @Provides
     internal fun provideGroupsDaoDao(appDatabase: AppDatabase): GroupsDao {
         return appDatabase.getGroupsDaoDao()
+    }
+
+    @Singleton
+    @Provides
+    internal fun provideBroodDao(appDatabase: AppDatabase): BroodDao {
+        return appDatabase.getBroodDao()
     }
 }

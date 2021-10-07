@@ -1,5 +1,5 @@
 <resources>
-<!--    <string name="app_name">Reptile Feed Timer</string>-->
+    <!--    <string name="app_name">Reptile Feed Timer</string>-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name">Name</string>
     <string name="choose_image">Choose image</string>
@@ -14,15 +14,15 @@
     <string name="edit">Edit</string>
     <string name="all_time">All time</string>
     <string name="default_interval">1</string>
-<!--    <string name="what_new">-->
-<!-- - Added the ability to create groups of animals;\n-->
-<!-- - Added the ability to record weight;\n-->
-<!-- - Added the ability to calculate the age of an animal;\n-->
-<!-- - Added a field for notes in the animal card;\n-->
-<!-- - Added the ability to feed twice a day;\n-->
-<!-- - Added the "Fed" button in the notification, which opens the app so that some smartphones do not disable the app, to save energy as not used (for those who stop receiving notifications over time);\n-->
-<!-- - Fixed a bug with flattening the avatar when installing a non-square image-->
-<!--    </string>-->
+    <!--    <string name="what_new">-->
+    <!-- - Added the ability to create groups of animals;\n-->
+    <!-- - Added the ability to record weight;\n-->
+    <!-- - Added the ability to calculate the age of an animal;\n-->
+    <!-- - Added a field for notes in the animal card;\n-->
+    <!-- - Added the ability to feed twice a day;\n-->
+    <!-- - Added the "Fed" button in the notification, which opens the app so that some smartphones do not disable the app, to save energy as not used (for those who stop receiving notifications over time);\n-->
+    <!-- - Fixed a bug with flattening the avatar when installing a non-square image-->
+    <!--    </string>-->
     <string name="what_new">
 Now the app has a free version (advertising banner and 3 animals for free) and a Pro version (without ads and restrictions).\n
 All funds will go to the organization of cloud storage, which will allow you to save data in case of loss or damage to the phone.\n\n
@@ -101,6 +101,14 @@ Please make sure that the notifications work correctly before purchasing the "Pr
     <string name="fed_evening">Fed evening</string>
     <string name="what_trial_version">This is a trial version</string>
     <string name="trial_version_desc">Now the app has a free version (advertising banner and 3 animals for free) and a Pro version (without ads and restrictions).</string>
+    <string name="brood">Brood</string>
+    <string name="broods">Broods</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="date_brood">Brood date</string>
+    <string name="hatching_date">Hatching date</string>
+    <string name="create_animal">Create Animal</string>
+    <string name="brood_name">Brood name</string>
 
 
 </resources>

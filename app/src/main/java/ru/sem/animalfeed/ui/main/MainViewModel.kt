@@ -16,6 +16,7 @@ import ru.sem.animalfeed.BuildConfig
 import ru.sem.animalfeed.R
 import ru.sem.animalfeed.alarm.EatReceiver
 import ru.sem.animalfeed.db.dao.AnimalDao
+import ru.sem.animalfeed.db.dao.BroodDao
 import ru.sem.animalfeed.db.dao.GroupsDao
 import ru.sem.animalfeed.db.dao.HistoryDao
 import ru.sem.animalfeed.model.*
@@ -31,7 +32,8 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
     val animalDao: AnimalDao, val historyDao: HistoryDao,
-    val context: Context, private val groupsDao: GroupsDao
+    val context: Context, private val groupsDao: GroupsDao,
+    val broodDao: BroodDao
 ): BaseViewModel() {
 
     init {
@@ -68,6 +70,8 @@ class MainViewModel @Inject constructor(
     val customMessageData: SingleLiveEvent<String> = SingleLiveEvent()
 
     val groupsData = groupsDao.getAll()
+
+    val broodData = broodDao.getAll()
 
     val groupWithNoGroupData: LiveData<List<Group>> = Transformations.map(groupsData) {
         val result = ArrayList<Group>(it.size+1)
@@ -255,6 +259,14 @@ class MainViewModel @Inject constructor(
 
     fun saveNewGroupsOrder(map: Map<Long, Int>){
         groupsDao.onSwiped(map)
+    }
+
+    fun saveNewBroodsOrder(map: Map<Long, Int>){
+        broodDao.onSwiped(map)
+    }
+
+    fun deleteBrood(item: Brood){
+        broodDao.delete(item)
     }
 
     private fun fixVersion291(){

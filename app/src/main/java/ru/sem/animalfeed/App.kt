@@ -67,6 +67,7 @@ class App : Application(), HasAndroidInjector {
 const val MAIN_CHANNEL_ID = "main"
 const val MAIN_CHANNEL_NAME = "Кормление"
 const val ANIMAL_ID = "anim_id"
+const val BROOD_ID = "brood_id"
 const val EXTRA_ANIMAL_NAME = "anim_name"
 const val PEN_INTENT_START_MAIN_REQUEST = 0
 const val EXTRA_NOTIFICATION_ID = "not_id"

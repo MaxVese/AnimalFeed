@@ -5,4 +5,6 @@
         android:icon="@drawable/ic_baseline_group_24"/>
     <item android:title="@string/animal" android:id="@+id/action_add_animal"
         android:icon="@drawable/ic_snake"/>
+    <item android:title="@string/brood" android:id="@+id/action_add_brood"
+        android:icon="@drawable/ic_egg"/>
 </menu>

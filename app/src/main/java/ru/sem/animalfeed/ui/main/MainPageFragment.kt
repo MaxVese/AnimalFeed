@@ -33,6 +33,7 @@ class MainPageFragment : BaseFragment(R.layout.fragment_main_page) {
             when (actionItem.id) {
                 R.id.action_add_animal -> findNavController().navigate(R.id.action_mainPageFragment_to_animalFragment)
                 R.id.action_add_group -> findNavController().navigate(R.id.action_mainPageFragment_to_groupsFragment)
+                R.id.action_add_brood -> findNavController().navigate(R.id.action_mainPageFragment_to_broodListFragment)
             }
             false
         })
